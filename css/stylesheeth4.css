@@ -1,0 +1,55 @@
+:root{
+    --bg-color:#fff4d6;
+    --black-color:#000;
+}
+img{
+    width:150px;
+    height: 150px;
+}
+h1 {
+    display:flex;
+    justify-content: center;
+    color:blue;
+}
+body{
+    background-color: antiquewhite;
+}
+.navlinks{  
+display:flex;
+justify-content: center;
+align-items: center;
+border:3px solid var(--black-color);
+width:150px;
+height: 50px;
+border-radius: 10%;
+text-decoration: none;
+color:var(--black-color);
+}
+a:hover{
+    text-decoration: underline;
+    color:#a78527;
+}
+
+li{
+    padding-top:10px;
+}
+
+ul{
+    list-style:none;
+}
+.kidBackPack{
+/* height:100vh; */
+padding:100px;
+color: #333333; 
+background: url(/img/elementarystudent.png) no-repeat bottom right;
+}
+
+.studentComputer{
+padding:200px;
+color: #333333; 
+background: url(/img/student.jpg) no-repeat bottom left;
+}
+figure img{
+    width:700px;
+    height:1000px;
+}
