@@ -1,0 +1,273 @@
+:root{
+    --bg-color:#fff4d6;
+    --black-color:#000;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    margin:50px;
+    background-color: var(--bg-color);
+    height: 100vh;
+    /* border: 1px #000 solid; */
+}
+
+header{
+    text-align: center;
+    grid-area: header;
+    width:100%;
+    border: 1px #000 solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; 
+}
+#heading2{
+    text-transform:uppercase;
+    color:#a78527;
+}
+
+#navbar{
+    grid-area: menu;
+    /* border: 1px red solid; */
+    padding:16px;
+}
+
+.navlinks{  
+display:flex;
+justify-content: center;
+align-items: center;
+border:3px solid var(--black-color);
+width:150px;
+height: 50px;
+border-radius: 10%;
+text-decoration: none;
+color:var(--black-color);
+}
+
+a:hover{
+    text-decoration: underline;
+    color:#a78527;
+}
+
+li{
+    padding-top:10px;
+}
+
+ul{
+    list-style:none;
+}
+
+#container{
+border: 1px #000 solid;
+margin: 0 auto;
+padding:0;
+height:auto;
+box-shadow: 5px 10px var(--black-color);
+display: grid;
+grid-template: 
+    [row1-start]"header header header header" 150px [row1-end]
+    [row2-start]"menu menu . content " 150px [row2-end]
+    [row3-start]". . content2 content2 " 150px [row3-end]
+    [row4-start]". . content3 content3 " 150px [row4-end]
+    [row5-start]"content4 content4 content4 content4 " 150px [row5-end]
+    [row6-start]"footer footer footer footer" 350px [row6-end] / auto 50px auto;
+}
+
+#section1{
+font-size: large;
+width:auto;
+height:auto;
+white-space: normal;
+grid-area: content;
+text-align: center;
+padding:10px 10px;
+/* overflow:hidden; */
+/* align-items: flex-end; */
+}
+#section2{
+width:auto;
+height:auto;
+white-space: normal;
+grid-area:content2;
+text-align: center;
+padding:10px 10px;
+}
+
+#article1{
+    grid-area: content3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 200px;
+    width:auto;
+}
+h3{
+    text-align: center;
+}
+#aside1{
+    padding-top:25px;
+    grid-area: content4;
+}
+.asideparagraph{
+    white-space: normal;
+    padding-top: 25px;
+    text-align: center;
+}
+
+#footers{
+    white-space: normal;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    padding-top: 250px;
+}
+
+
+/* contact page form css */
+#secform{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height: 500px;
+    border:3px solid var(--black-color);
+    box-shadow: 5px 10px var(--black-color);
+}
+#infoheading{
+    font-size: x-large;
+}
+label{
+    font-size: larger;
+    padding-top: 50px;
+}
+input{
+    width: 200px;
+    height: 30px;
+}
+.req{
+    color:red;
+}
+*:required{
+    background-color: #bbbbba;
+}
+/* meetup css */
+
+#container2{
+border: 1px #000 solid;
+margin: 0 auto;
+padding:0;
+height:auto;
+box-shadow: 5px 10px var(--black-color);
+display: grid;
+grid-template: 
+    [row1-start]"header header header header" 150px [row1-end]
+    [row2-start]"menu menu . content5 " 150px [row2-end]
+    [row3-start]". . . content6 " 150px [row3-end]
+    [row4-start]". . content7 content7 " 150px [row4-end]
+    [row5-start]". . content8 content8 " 150px [row5-end]
+    [row6-start]"content9 content9 content9 content9" 350px [row6-end]
+    [row7-start]". . content10 content10" 350px [row7-end]
+    [row8-start]"footers2 footers2 footers2 footers2" 350px [row8-end] / auto 50px auto;
+}
+
+#meetupsec1{
+font-size: large;
+width:auto;
+height:auto;
+white-space: normal;
+grid-area: content5;
+text-align: center;
+padding:10px 10px;
+}
+
+.paragraph1{
+grid-area: content6;
+line-height: 20px;
+width:auto;
+height:auto;
+white-space: normal;
+text-align: center;
+padding:10px 10px;
+}
+
+.paragraph2{
+    line-height: 20px;
+    grid-area: content7;
+    text-align: center;
+    padding:20px 10px;
+}   
+.paragraph3{
+    line-height: 20px;
+    grid-area:content8;
+    text-align: center;
+    padding:20px 10px;
+}
+#meetupImg{
+    position:relative;
+    animation: imgAnimation 5s infinite;
+}
+
+#comPhoto {
+    grid-area: content9;
+    animation-timing-function: ease-out;
+}
+
+@keyframes imgAnimation {
+    from{left:0px; }
+    to{ left:500px;}
+}
+#videosection{
+    grid-area:content10;
+    padding:30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footers2{
+    grid-area:footers2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 730px){
+    #container , #container2{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #meetupImg{
+    position:relative;
+    animation: imgAnimation 5s infinite;
+}
+
+#comPhoto {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: content9;
+    animation-timing-function: ease-out;
+}
+
+@keyframes imgAnimation {
+    from{left:auto; }
+    to{ left:auto;}
+}
+
+iframe{
+    width:auto;
+}
+}
